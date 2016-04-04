@@ -1,0 +1,23 @@
+_Main()
+$StatusFlag
+1		確認路徑存在不存在
+2		路徑不存在，提示等待機台
+3		上拋RRR，等待AAA
+4		上拋BBB，等待CCC
+
+
+ReadINI()		讀取配置檔，$Destination=F:\Parameters
+CreateWindow()	建立UI
+EnableWindow()
+WaitSFCS_RA()	檢查AAA
+WaitSFCS()	檢查CCC
+SendRRR()
+RecvAAA()
+SendBBB()
+RecvCCC()
+ShowOK()		UI顯示
+ShowNG()		UI顯示
+ShowInfo()	UI顯示
+MsgOnExit()	
+MsgOnButton()	根據RRRAAA狀況，改變UI界面
+_CheckPath()	確認文件or路徑是否存在

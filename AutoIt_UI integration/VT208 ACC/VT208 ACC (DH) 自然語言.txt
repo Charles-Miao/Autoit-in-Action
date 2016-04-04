@@ -1,0 +1,27 @@
+Ini檔案讀取
+設定UI
+
+主程式
+代拋IN站
+update program
+根據架構調出程式
+檢查Tool的運行結果WaitResult()
+
+ReadINI()		檢查INI檔案讀取是否正常
+SendBBB()
+RecvCCC()
+SCAN()		
+SendRRR()
+WaitAAA()
+WaitResult()	UI相關函數
+
+Func WaitResult()
+	If WinExists($WinTitle) And ControlGetText($WinTitle, "", $WinCtrl) == "PASS" Then
+		Return "PASS"
+	ElseIf WinExists($WinTitle) And ControlGetText($WinTitle, "", $WinCtrl) == "FAIL" Then
+		Return "FAIL"
+	Else
+		return "wait"
+	EndIf
+EndFunc
+

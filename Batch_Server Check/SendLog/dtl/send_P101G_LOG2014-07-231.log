@@ -1,0 +1,9 @@
+ftp> Connected to 103.10.4.191.
+open 103.10.4.191
+220 (vsFTPd 3.0.2)
+User (103.10.4.191:(none)): 
+331 Please specify the password.
+
+230 Login successful.
+ftp> bye 
+221 Goodbye.

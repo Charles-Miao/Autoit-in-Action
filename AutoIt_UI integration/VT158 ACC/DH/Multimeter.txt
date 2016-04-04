@@ -1,0 +1,5 @@
+1. 創建UI時, ClosePort, UnloadDLL
+2. LoadDLL
+3. InitPort
+4. GetData, 若不包含"DCV", 則提示檔位異常, ClosePort, UnloadDLL 
+5. GetData

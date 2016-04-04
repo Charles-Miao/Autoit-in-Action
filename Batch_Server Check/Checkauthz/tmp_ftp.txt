@@ -1,0 +1,5 @@
+open 192.168.168.71
+imagecrc
+5CTEconsole
+put E:\svn_config\authz.conf
+bye

@@ -1,0 +1,33 @@
+Dear All, 
+This is Check SVN report. 
+Please known it, Thanks! 
+
+------------------------------------------------------------------------
+r4 | chundong | 2014-07-25 13:17:17 +0800 (÷‹ŒÂ, 25 ∆ﬂ‘¬ 2014) | 1 line
+Changed paths:
+   M /ZA_Function/TestConfig.ini
+
+change AD300 CPU FW From PAABXS00-001-R02 To PAABXS00-001-R04
+------------------------------------------------------------------------
+Index: E:/Molly_PCBA/PCBA_AD300/ZA_Function/TestConfig.ini
+===================================================================
+--- E:/Molly_PCBA/PCBA_AD300/ZA_Function/TestConfig.ini	(revision 3)
++++ E:/Molly_PCBA/PCBA_AD300/ZA_Function/TestConfig.ini	(revision 4)
+@@ -7,7 +7,7 @@
+ ;;0:PCBA 1:FA
+ 
+ ScannerFW = PAACDS00-001-R00
+-BoardSW = PAABXS00-001-R02
++BoardSW = PAABXS00-001-R04
+ CapTouch = 64-14036-01 Rev A x=.0100 y=.0300 Tchar=64 ECL=2 MRD80 14036-01A
+ 
+ 
+
+Best Regards!
+==========WKS Plant 5C============
+WKS Plant 5C/MEZ920/TE 
+Charles Miao(2948)
+Tel: 687824 
+E-Mail: Charles Miao/WKS/Wistron
+Wistron InfoComm (Kunshan) Co. Ltd.
+================================= 

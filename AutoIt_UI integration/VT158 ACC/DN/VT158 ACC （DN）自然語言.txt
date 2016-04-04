@@ -1,0 +1,30 @@
+CommMG.au3
+
+VT158ACC_V0.2.au3
+
+函數
+_Main()		主函數
+初始化
+創建初始化窗口
+檢查COM連接是否正常,並過站
+
+_InitFunc()		初始化配置當/Stage/上拋路徑/串口; 若無法獲取配置檔中的串口, 則自動獲取; 若串口連接錯誤, 則報錯
+_AutoGetPort()	自動獲取串口(默認為COM3), 要求電腦只能連接一個串口, 否則無法獲取
+_CreateWin()	製作UI窗口
+_EnableInput()	開啟輸入
+_DisableInput()	禁止輸入
+_ShowPass()	在Log中寫入PASS, 並提示流到下一站
+_ShowFail()	在Log中寫入FAIL, 並提示從新測試
+_ShowInfo()	UI顯示
+_LoopFunc()	檢查COM連接是否正常, 並過站
+獲取COM口字符串; 若字符串中含有"AT", 則輸入條碼; 
+傳輸RRRAAA, 若Fail則提示異常; 判斷AAA文件中的SfcResult/ SfcStage是否有異常
+若站別正確, 傳輸BBBCCC, 若Fail則提示異常, 並將Error信息寫入Log中; 判斷CCC文件中的SfcResult/ SfcStage是否有異常
+調用_ShowPass()函數
+
+_MsgOnExit()	關閉Port
+_MsgOnOk()	檢查條碼長度, 若NG, 則提示從新輸入條碼
+_SendRRR()
+_RecvAAA()	同時更新程式, 調用TestUpdate.bat
+_SendBBB()
+_RecvCCC()

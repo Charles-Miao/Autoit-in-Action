@@ -1,0 +1,56 @@
+Multimeter.au3
+初始化句柄=-1
+
+函數
+Multimeter_LoadDll()		Open Multimeter.dll
+Multimeter_UnloadDll()	Close Multimeter.dll, 並初始化句柄
+Multimeter_InitPort()		初始化串口
+Multimeter_ClosePort()	關閉串口
+Multimeter_GetData()	獲取串口的值
+
+
+
+VT158ACC_V1.2.au3
+初始化
+	
+函數
+FileExists()		檢查文件存在函數
+
+_Main()		主函數
+初始化, 建立窗口, 獲取INI配置當名稱
+初始化串口, 獲取串口值, 檢查字符串是否包含"DCV", 關閉串口, Close DLL
+通過_LoopFunc()讀取串口值, 並上拋
+
+_GetIniSet()	初始串口, 機種名, RABC路徑
+_CreateWin()	主窗口函數, SN/站別/端口/測試項/測試值/最大值/最小值/結果/第1項/第2項/第3項/第4項
+_MsgOnExit()	關閉串口/ Close DLL
+
+_MsgOnOk()	上拋RRR, 回复AAA, 確認PN&Stage, 確定Spec	
+檢查條碼是否正確(是否為15碼, 並以S開頭)
+條碼正確, 上拋RRR, 回复AAA
+讀架構PN/ 站別Stage
+刪除AAA, 更新程式
+判斷PN/ Stage是否為空
+若Stage為IN/ DH, 測試項為3個/ 測試次數為1或4/ 檢查Sepc為浮點數/ 填補UI中Spec值
+若Stage錯誤, 則報錯
+若RRR/ AAA文件傳輸錯誤, 則提示檢查網絡
+若SN為空, 則提示重新刷條碼
+
+_LoopFunc()	讀取串口值, 並上拋BBB, 回复CCC
+根據測試次數決定For循環幾次
+確認治具是否放好, 若未放好提示充電燈NG
+讀串口值, 並填寫到UI中, 判定是否在Spec之內($C標記測試次數/ $D標記測試成功與否)
+上拋BBB, 回复CCC
+讀SFC/ Result, 刪除CCC文件, Show結果
+若BBB/ CCC文件傳輸錯誤, 則提示檢查網絡
+
+_SendRRR()	Delete AAA文件, 打開&寫入&關閉".BB_", 轉存為".RRR"
+_RecvAAA()	查看AAA文件是否存在
+_SendBBB()	Delete CCC文件, 打開&寫入&關閉".BB_", 轉存為".BBB"
+_RecvCCC()	查看CCC文件是否存在
+_Enable()		UI函數	
+_TestPic_Disable()	UI函數
+_ACCLablel1()	UI函數
+_ACCLablel2()	UI函數
+_ACCLablel3()	UI函數
+_ACCLablel4()	UI函數

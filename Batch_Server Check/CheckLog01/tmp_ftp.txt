@@ -1,0 +1,5 @@
+open 192.168.168.71
+imagecrc
+5CTEconsole
+put D:\ServerCheck\CheckLog\236_CheckLog.log
+bye
