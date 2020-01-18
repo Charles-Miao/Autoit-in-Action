@@ -1,0 +1,16 @@
+if not exist active.ok echo active>.\active.ok
+del /F /Q .\flag\OK
+del /F /Q .\flag\active.ok
+::timeout 6
+start autoit3.exe .\RunIntel.au3
+slmgr /skms 10.42.22.91:1688
+slmgr /ato
+timeout 4
+if exist .\flag\active.ok goto end
+echo >.\flag\OK
+pushd .\Notice
+call start.bat
+popd
+:end
+::timeout 10
+echo >.\flag\OK

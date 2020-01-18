@@ -1,0 +1,1 @@
+net use \\172.30.21.63\c$ /user:administrator Z900TE@Quality!!#

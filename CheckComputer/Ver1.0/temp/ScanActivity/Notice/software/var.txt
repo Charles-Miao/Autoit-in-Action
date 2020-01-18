@@ -1,0 +1,15 @@
+font height
+message
+X position
+Y position
+********************************
+font name
+font text color
+font background color
+window color
+transparency color
+display time
+
+
+
+

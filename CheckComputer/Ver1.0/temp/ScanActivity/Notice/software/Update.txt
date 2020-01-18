@@ -1,0 +1,8 @@
+chcp 437
+echo off
+path | find /i "\tool;" >nul || path=%path%;..\..\tool;..\tool
+start adbOnOffline.exe
+tasklist | find /i "BeeNotice.exe"
+if errorlevel 1 pushd
+for /f %%i in ('dir /b ..\..\temp\*.ini') do set SN=%%~ni
+echo update ok >..\..\flag\%SN%-%~n0.ok
